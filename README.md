@@ -18,5 +18,19 @@
 
 далее через любой bash создаем Docker container
 
-docker run --name myViteProject --restart=always -p 3000:5173 -d test # после перезагрузки будет работать заново
-docker run --rm --name myViteProject -p 3000:5173 -d test #создание докер контейнера, который после остановки удаляется
+docker run --name myViteProject --restart=always -p 3000:5173 -d test 
+после перезагрузки будет работать заново
+
+docker run --rm --name myViteProject -p 3000:5173 -d test
+создание докер контейнера, который после остановки удаляется
+
+3000:5173 - 1. порт для докер контейнера, 5173 - порт для React-приложения (порт можно изменить в tsconfig.ts)
+
+-d (выполнение Docker-container в фоновом режиме)
+
+-p (прослушивание портов)
+
+полная документация к Docker:
+https://docs.docker.com/go/guides/
+
+мне самому стоит ее почитать :3
